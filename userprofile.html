@@ -1,0 +1,210 @@
+<html>
+<head><title>Userprofile</title></head>
+<body>
+    <table>
+        <tr>
+            <td><h1>{{ user.username }}</h1></td>
+        </tr>
+    </table>
+    <form action="{% url 'smartcity:editinfo' user.id%}" method = "post">
+        {% csrf_token %}
+
+        <table>
+            <tr>
+                <td>User Type: </td>
+                {% if user.userType == 1 %}
+                    <td><br><select>
+                        <option value="1" selected>student</option>
+                        <option value="2">businessman</option>
+                        <option value="3">tourist</option>
+                    </select></td>
+                {% elif user.userType == 2 %}
+                    <td><br><select>
+                        <option value="1">student</option>
+                        <option value="2" selected>businessman</option>
+                        <option value="3">tourist</option>
+                    </select></td>
+                {% elif user.userType == 3 %}
+                    <td><br><select>
+                        <option value="1">student</option>
+                        <option value="2">businessman</option>
+                        <option value="3" selected>tourist</option>
+                    </select></td>
+                {% endif %}
+            </tr>
+            <tr>
+                <td><br>First Name:</td>
+                <td><br><input id="fname" type="text" name="fname" style="width:235px;" value="{{ user.firstname }}"></td>
+            </tr>
+            <tr>
+                <td><br>Middle Name:</td>
+                <td><br><input id="mname" type="text" name="mname" style="width:235px;" value="{{ user.middlename }}"></td>
+            </tr>
+            <tr>
+                <td><br>Lastname:</td>
+                <td><br><input id="lname" type="text" name="lname" style="width:235px;" value="{{ user.lastname }}"></td>
+            </tr>
+            <tr>
+                <td><br>Gender:</td>
+                {% if user.gender == 1 %}
+                    <td><br><select>
+                        <option value="1" selected>male</option>
+                        <option value="2">female</option>
+                        <option value="3">other</option>
+                        <option value="4">not to disclose</option>
+                    </select></td>
+                {% elif user.gender == 2 %}
+                    <td><br><select>
+                        <option value="1">male</option>
+                        <option value="2" selected>female</option>
+                        <option value="3">other</option>
+                        <option value="4">not to disclose</option>
+                    </select></td>
+                {% elif user.gender == 3 %}
+                    <td><br><select>
+                        <option value="1">male</option>
+                        <option value="2">female</option>
+                        <option value="3"  selected>other</option>
+                        <option value="4">not to disclose</option>
+                    </select></td>
+                {% elif user.gender == 4 %}
+                    <td><br><select>
+                        <option value="1">male</option>
+                        <option value="2">female</option>
+                        <option value="3">other</option>
+                        <option value="4"  selected>not to disclose</option>
+                    </select></td>
+                {% endif %}
+            </tr>
+            <tr>
+                <td><br>Email:</td>
+                <td><br><input id="email" type="text" name="email" style="width:235px;" value="{{ user.email }}"></td>
+            </tr>
+            <tr>
+                <td><br>Phone Number:</td>
+                <td><br><input id="phoneNumber" type="text" name="phoneNumber" style="width:235px;" value="{{ user.phoneNumber }}"></td>
+            </tr>
+            <tr>
+                <td><br>Date of birth:</td>
+                <td><br><input id="dob" type="text" name="dob" style="width:235px;" value="{{ user.dob }}"></td>
+            </tr>
+            <tr>
+                <td><br>Address:</td>
+            </tr>
+            <tr>
+                <td><br>Unit:</td>
+                <td><br><input id="unit" type="text" name="unit" style="width:235px;" value="{{ user.unit }}"></td>
+            </tr>
+            <tr>
+                <td><br>Street:</td>
+                <td><br><input id="street" type="text" name="street" style="width:235px;" value="{{ user.street }}"></td>
+            </tr>
+            <tr>
+                <td><br>Suburb:</td>
+                <td><br><input id="suburb" type="text" name="suburb" style="width:235px;" value="{{ user.suburb }}"></td>
+            </tr>
+            <tr>
+                <td><br>State:</td>
+                {% if user.state == 1 %}
+                    <td><br><select>
+                        <option value="1"  selected>QLD</option>
+                        <option value="2">NSW</option>
+                        <option value="3">ACT</option>
+                        <option value="4">VIC</option>
+                        <option value="5">SA</option>
+                        <option value="6">WA</option>
+                        <option value="7">NT</option>
+                        <option value="8">TAS</option>
+                    </select></td>
+                {% elif user.state == 2 %}
+                    <td><br><select>
+                        <option value="1">QLD</option>
+                        <option value="2"  selected>NSW</option>
+                        <option value="3">ACT</option>
+                        <option value="4">VIC</option>
+                        <option value="5">SA</option>
+                        <option value="6">WA</option>
+                        <option value="7">NT</option>
+                        <option value="8">TAS</option>
+                    </select></td>
+                {% elif user.state == 3 %}
+                    <td><br><select>
+                        <option value="1">QLD</option>
+                        <option value="2">NSW</option>
+                        <option value="3"  selected>ACT</option>
+                        <option value="4">VIC</option>
+                        <option value="5">SA</option>
+                        <option value="6">WA</option>
+                        <option value="7">NT</option>
+                        <option value="8">TAS</option>
+                    </select></td>
+                {% elif user.state == 4 %}
+                    <td><br><select>
+                        <option value="1">QLD</option>
+                        <option value="2">NSW</option>
+                        <option value="3">ACT</option>
+                        <option value="4"  selected>VIC</option>
+                        <option value="5">SA</option>
+                        <option value="6">WA</option>
+                        <option value="7">NT</option>
+                        <option value="8">TAS</option>
+                    </select></td>
+                {% elif user.state == 5 %}
+                    <td><br><select>
+                        <option value="1">QLD</option>
+                        <option value="2">NSW</option>
+                        <option value="3">ACT</option>
+                        <option value="4">VIC</option>
+                        <option value="5"  selected>SA</option>
+                        <option value="6">WA</option>
+                        <option value="7">NT</option>
+                        <option value="8">TAS</option>
+                    </select></td>
+                {% elif user.state == 6 %}
+                    <td><br><select>
+                        <option value="1">QLD</option>
+                        <option value="2">NSW</option>
+                        <option value="3">ACT</option>
+                        <option value="4">VIC</option>
+                        <option value="5">SA</option>
+                        <option value="6"  selected>WA</option>
+                        <option value="7">NT</option>
+                        <option value="8">TAS</option>
+                    </select></td>
+                {% elif user.state == 7 %}
+                    <td><br><select>
+                        <option value="1">QLD</option>
+                        <option value="2">NSW</option>
+                        <option value="3">ACT</option>
+                        <option value="4">VIC</option>
+                        <option value="5">SA</option>
+                        <option value="6">WA</option>
+                        <option value="7"  selected>NT</option>
+                        <option value="8">TAS</option>
+                    </select></td>
+                {% elif user.state == 8 %}
+                    <td><br><select>
+                        <option value="1">QLD</option>
+                        <option value="2">NSW</option>
+                        <option value="3">ACT</option>
+                        <option value="4">VIC</option>
+                        <option value="5">SA</option>
+                        <option value="6">WA</option>
+                        <option value="7">NT</option>
+                        <option value="8"  selected>TAS</option>
+                    </select></td>
+                {% endif %}
+            <tr>
+                <td><br>Postcode:</td>
+                <td><br><input id="dob" type="text" name="dob" style="width:235px;" value="{{ user.postcode }}"></td>
+            </tr>
+
+        </table><tr>
+                <td><br> </td>
+                <td><br><button type="button" >Edit</button></td>
+            </tr>
+
+    </form>
+</body>
+</html>
+
