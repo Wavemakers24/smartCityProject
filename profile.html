@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    
+<!-- If IE use the latest rendering engine -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Set the page to the width of the device and set the zoon level -->
+<meta name="viewport" content="width = device-width, initial-scale = 1">
+<title>Account management</title>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<style>
+
+html, body{
+    height: 100%;
+}
+header{
+    padding: 5px;
+    color: white;
+    background-color: #4e4e4e;
+    clear: left;
+    text-align: center;
+    text-shadow: none;
+}
+line{
+     border-left: solid #000000
+}
+section{
+    padding: 1em;
+    color: black;
+    background-color: white;
+    clear: left;
+    text-align: center;
+    height: 100%;
+}
+table .absorbing-row {
+    height: 100%;
+}
+table .absorbing-column {
+    width: 100%;
+}
+a, a:hover, a:active, a:visited, a:focus {
+    text-decoration:none;
+    color: black;
+}
+
+/**/
+
+td a {
+    display:block;
+    width:100%;
+}
+</style>
+</head>
+<body>
+<header>
+    <table width="100%", border="0">
+    <tr>
+        <td align="left">
+            <a text-decoration="none" href="welcome">
+            <font face="Corbel" size="5"><left><b>
+                <img src="../../static/logo2.png">
+            </b></left></font>
+            </a>
+        </td>
+        <td width="100%" class="absorbing-row"></td>
+        <td style = "white-space:PRE">Welcome, user  </td>
+        <td><font color="black"><line></line></font></td>
+        <td style = "white-space:PRE"><a href="#"><font color="white">  Logout</font></a></td>
+
+    </tr>
+    </table>
+</header>
+<section>
+<table  border="1" width="100%">
+    <tr>
+        <td align="center" width="50%" onmouseover="this.style.background='gray';" onmouseout="this.style.background='white';">
+            <p><a href="pagea" target="iframe_a"><font face="Corbel" size="2" color="black"><b>Acoount</b></font></a></p>
+        </td>
+        <td align="center" width="50%" onmouseover="this.style.background='gray';" onmouseout="this.style.background='white';">
+            <p><a href="pageb" target="iframe_a"><font face="Corbel" size="2" color="black"><b>Personal details</b></font></a></p>
+        </td>
+    </tr>
+</table>
+<table border="0" width="100%" height="100%">
+    <tr>
+        <td colspan="2" valign="top" class="absorbing-row">
+            <iframe width="100%" height="100%" src="pagea" name="iframe_a" frameBorder="0"></iframe>
+        </td>
+    </tr>
+</table>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>
