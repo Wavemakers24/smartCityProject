@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<!-- If IE use the latest rendering engine -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Set the page to the width of the device and set the zoon level -->
+<meta name="viewport" content="width = device-width, initial-scale = 1">
+<title>Bootstrap Tutorial</title>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<style>
+header{
+    padding: 5px;
+    color: white;
+    background-color: #4e4e4e;
+    clear: left;
+    text-align: center;
+}
+line{
+     border-left: solid #000000
+}
+nav{
+    padding: 1em;
+    color: black;
+    background-color: white;
+    clear: left;
+    text-align: center;
+}
+section{
+    padding: 1em;
+    color: black;
+    background-color: white;
+    clear: left;
+    text-align: center;
+}
+a { color: inherit; }
+a:hover {text-decoration: none;}
+White{color: white;}
+Blue{color:lightskyblue;}
+Black{color:Black;}
+
+</style>
+</head>
+<body>
+<header>
+    <table width="100%", border="0">
+    <tr>
+        <td width="70%" align="left"><a text-decoration="none" href="#">
+            <font face="Corbel" size="5"><left><b>
+                <White>S<Blue>M</Blue>ART CI<Blue>T</Blue>Y</White>
+            </b></left></font>
+        </a></td>
+        <td>Welcome</td>
+        <td><font color="black"><line></line></font></td>
+        <td><a href="#"><font color="white">Login</font></a></td>
+        <td><font color="black"><line></line></font></td>
+        <td><a href="#"><font color="white">Register</font> </a></td>
+    </tr>
+    </table>
+</header>
+<h1>Register</h1>
+
+<nav>
+    <center><table border="0">
+        Registration Form<br>
+
+        <tr>
+            <td>
+                <br><font>Username</font><br>
+                <input type="text" name="username" id="username" placeholder="Username"><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <br><font>Password</font><br>
+                <input type="password" name="password1" id="password1" placeholder="Password"><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <br><font>Confirm password</font><br>
+                <input type="password" name="password2" id="password2" placeholder="Confirm Password"><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <br><font>First name</font><br>
+                <input type="text" name="first_name" id="first_name" placeholder="First Name"><br>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <br><font>Middle name</font><br>
+                <input type="text" name="middle_name" id="middle_name" placeholder="Middle Name"><br>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <br><font>Last name</font><br>
+                <input type="text" name="last_name" id="last_name" placeholder="Last Name"><br>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <br><font>Gender</font><br>
+                <input type="radio" name="sex" id="sex" value="male">Male
+                <input type="radio" name="sex" id="sex" value="female">Female<br>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <br><font>Date of birth</font><br>
+                <input type="date" name="date_of_birth" id="date_of_birth" placeholder="Date of Birth"><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <br><font>Address</font><br>
+
+                <br><font>Unit</font>
+                <input type="text" name="unit" id="unit" placeholder="Unit Number"><br>
+                <br><font>Street</font>
+                <input type="text" name="street" id="street" placeholder="Street Name"><br>
+                <br><font>Suburb/Town</font>
+                <input type="text" name="suburb" id="suburb" placeholder="Suburb"><br>
+                <br><font>State</font>
+                <input type="text" name="state" id="state" placeholder="State"><br>
+                <br><font>Postcode</font>
+                <input type="text" name="postcode" id="postcode" placeholder="Postcode"><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <br><font>Mobile number</font><br>
+                <input type="text" name="mobile_number" id="mobile_number" placeholder="0412345678"> Number<br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <br><font>E-mail address</font><br>
+                <input type="email" name="email" id="email" placeholder="xxxxx@gmail.com"><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <br><font>User type</font><br>
+                <label for="student" class="ui-hidden-accessible">Student</label>
+                <input type="radio" name="student" id="student" value="student"><br>
+                <label for="tourist" class="ui-hidden-accessible">Tourist</label>
+                <input type="radio" name="tourist" id="tourist" value="tourist"><br>
+                <label for="businessman" class="ui-hidden-accessible">Businessman</label>
+                <input type="radio" name="businessman" id="businessman" value="Businessman"><br>
+            </td>
+        </tr>
+
+
+
+
+    </table></center>
+
+</nav>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>
