@@ -4,15 +4,15 @@ from .models import Users
 from django.views import generic
 from django.contrib.auth import authenticate, login
 from django.views.generic import View
-from .forms import registrationForm
+from .forms import userFrom
 
 
 #def index(request):
     #all_user = Users.objects.all()
     #return render(request, 'smartcity/userlist.html', {'all_user': all_user})
 
-'''class register(View):
-    form_class = registrationForm
+class registerView(View):
+    form_class = userFrom
     template_name = 'smartcity/register.html'
     #display blank form
     def get(self, request):
@@ -48,8 +48,8 @@ from .forms import registrationForm
             if user is not None:
                 if user.is_active:
                     login(request, user)
-                    return redirect('smartcity:index')'''
-
+                    return redirect('smartcity:index')
+        return render(request, self.template_name, {'form': form})
 
 
 def userprofile(request, user_id):

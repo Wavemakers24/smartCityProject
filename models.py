@@ -1,6 +1,7 @@
 from django.db import models
 from smartcity.choices import *
 from django.core.validators import MaxValueValidator, MinValueValidator
+from django.core.urlresolvers import reverse
 
 class Users(models.Model):
     username = models.CharField(max_length= 20)
@@ -19,6 +20,9 @@ class Users(models.Model):
     postcode = models.IntegerField(validators=[MaxValueValidator(9999), MinValueValidator(1)])
     userType = models.IntegerField(choices= usertype_Choices)
     #userIcon = models.CharField(max_length= 500)
+
+    def get_absolut_url(self):
+        return reverse('smartcity:register', kwargs={'pk: self.pk'})
 
     def __str__(self):
          return self.username + ' - ' + self.password + ' - ' + self.firstname + ' - ' + self.middlename + ' - ' + self.lastname \

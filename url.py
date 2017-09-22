@@ -17,6 +17,7 @@ urlpatterns = [
     url(r'^userlist/(?P<user_id>[0-9]+)/editinfo/$', views.editinfo, name= 'editinfo'),
 
     url(r'^$', views.welcome, name='index'),
+    url(r'^register$', views.registerView.as_view(), name='index'),
     url(r'^login$', views.login, name='login'),
     url(r'^profile$', views.profile, name='profile'),
     url(r'^template$', views.template, name='template'),

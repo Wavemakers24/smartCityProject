@@ -3,17 +3,17 @@ from .models import Users
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 
-'''class userFrom(forms.ModelForm):
+class userFrom(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput)
 
     class Meta:
-        model = User
-        fields = ['username', 'password', 'password2', 'firstname', 'middlename', 'lastname'\
+        model = Users
+        fields = ['username', 'password', 'firstname', 'middlename', 'lastname'\
                   , 'gender', 'dob', 'unit', 'street', 'suburb', 'state', 'postcode', 'phoneNumber'\
-                  , 'email', 'userType']'''
+                  , 'email', 'userType']
 
 
-class registrationForm(UserCreationForm):
+'''class registrationForm(UserCreationForm):
     email = forms.EmailField(required=True)
 
     class Meta:
@@ -37,7 +37,7 @@ class registrationForm(UserCreationForm):
             'userType',
             )
 
-    '''def save(self, commit=True):
+    def save(self, commit=True):
         user = super(RegistrationForm, self).save(commit=False)
         user.firstname = cleaned_data['firstname']
         user.lastname = cleaned_data['lastname']
